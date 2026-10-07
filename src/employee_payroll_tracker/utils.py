@@ -1,4 +1,4 @@
-from employee_payroll_tracker.employee import Employee
+from employee import Employee
 
 
 def calculate_salary(employee: Employee):

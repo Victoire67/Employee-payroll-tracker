@@ -1,5 +1,5 @@
-from employee_payroll_tracker.utils import calculate_salary , apply_tax , generate_payslip
-from employee_payroll_tracker.employee import Employee
+from utils import calculate_salary , apply_tax , generate_payslip
+from employee import Employee
 
 class Payroll :
     def __init__(self):
