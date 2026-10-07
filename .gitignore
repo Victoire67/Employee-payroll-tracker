@@ -19,9 +19,9 @@ htmlcov/
 .ruff_cache/
 
 # Secrets and local config
-.env
 
 # Editor and OS files
-.vscode/
 .idea/
 .DS_Store
+config.bat
+node_modules
