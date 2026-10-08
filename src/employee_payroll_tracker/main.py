@@ -18,7 +18,12 @@ while i < 10:
     i += 1
 print(amali_tech[0])
 
-january = Payroll()
 
-january.add_employee(employee=[amali_tech[0]])
 
+
+
+january = Payroll(amali_tech)
+
+january.run()
+
+# print(amali_tech)
