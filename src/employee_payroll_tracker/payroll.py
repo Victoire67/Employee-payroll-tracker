@@ -3,7 +3,7 @@ from .employee import Employee
 
 class Payroll :
     def __init__(self , employees):
-        self._employees : list[Employee] = employees
+        self._employees : list[Employee] = list(employees)
 
     def add_employee(self, employee : Employee):
         self._employees.append(employee)
