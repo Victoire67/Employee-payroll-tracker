@@ -8,8 +8,12 @@ class Payroll :
     def add_employee(self, employee : Employee):
         self._employees.append(employee)
 
-    def remove_employee(self , employee : Employee ) -> None :
-        self._employees.remove(employee)
+    def remove_employee(self ,  employeeName ) -> None :
+        if employeeName in self.employees : 
+            self.employees.delete(self.employees[employeeName])
+        else : 
+            raise KeyError(f"No employee with id {id}")
+
 
     def total_tax(self) -> int : 
         return sum(e.tax for e in self._employees)
