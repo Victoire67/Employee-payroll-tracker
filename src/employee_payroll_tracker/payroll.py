@@ -1,4 +1,4 @@
-from .utils import calculate_salary , apply_tax , generate_payslip
+from .utils import calculate_salary  , generate_payslip
 from .employee import Employee
 
 class Payroll :

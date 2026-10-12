@@ -9,7 +9,8 @@ def calculate_salary(employee: Employee):
 def generate_payslip(employee: Employee):
     print(employee)
     print(
-        f"Type:   {type(employee.__ne__)}\n"
+        f"Name:   {(employee["name"])}\n"
+        f"Kind:   {(employee["KIND"])}\n"
         f"Salary: {employee["salary"]}\n"
         f"Bonus:  {employee["bonus"]}\n"
         f"Tax:    {employee["tax"]}\n"

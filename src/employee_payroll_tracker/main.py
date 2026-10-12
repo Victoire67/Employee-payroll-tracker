@@ -15,7 +15,9 @@ def main() -> int:
         amali_tech.append({
             "salary": salaries[i],
             "bonus": bonusies[i],
-            "tax": taxes[i]
+            "tax": taxes[i],
+            "name" : "VIKI",
+            "KIND" : "MUTTTU"
         })
         i += 1
     print(amali_tech[0])
