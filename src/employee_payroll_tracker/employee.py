@@ -1,9 +1,9 @@
 class Employee:
 
     def __init__(self, salary: int, bonus: int, tax: int):
-        self._salary = salary
-        self._bonus = bonus
-        self._tax = tax
+        self.salary = salary
+        self.bonus = bonus
+        self.tax = tax
 
     @property
     def salary(self):
