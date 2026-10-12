@@ -1,5 +1,5 @@
-from employee import Employee
-from payroll import Payroll
+from .employee import Employee
+from .payroll import Payroll
 
 salaries = list(range(4000000, 350000, -350000))
 taxes = list(range(40000, 3500, -3500))
