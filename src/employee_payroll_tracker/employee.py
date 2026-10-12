@@ -1,9 +1,14 @@
 class Employee:
+    MIN_SALARY = 0 
+    MIN_BONUS = 0 
+    KIND = "Employee"
 
-    def __init__(self, salary: int, bonus: int, tax: int):
+    def __init__(self, salary: int, bonus: int, tax: int , name):
+        self.name = self.name
         self.salary = salary
         self.bonus = bonus
         self.tax = tax
+        
 
     @property
     def salary(self):
@@ -19,8 +24,8 @@ class Employee:
 
     @salary.setter
     def salary(self, value):
-        if value < 700000:
-            raise ValueError("Salary should not be below zero")
+        if value < self.MIN_SALARY:
+            raise ValueError(f"Salary should not be below {self.MIN_SALARY}")
         self._salary = value
 
     @bonus.setter
@@ -39,6 +44,8 @@ class Employee:
 
 
 class FullTimeEmployee(Employee):
+    MIN_SALARY, MIN_BONUS, KIND = 700_000, 20_000, "Full-time employee"
+
     @property
     def salary(self):
         return self._salary
@@ -53,15 +60,15 @@ class FullTimeEmployee(Employee):
 
     @salary.setter
     def salary(self, value):
-        if value < 700000:
-            raise ValueError("A Full time employee earns 700K and above")
+        if value < self.MIN_SALARY:
+            raise ValueError(f"A Full time employee earns {self.MIN_SALARY} and above")
         self._salary = value
 
     @bonus.setter
     def bonus(self, value):
-        if value < 20000:
+        if value < self.MIN_BONUS:
             raise ValueError(
-                "A full time employee should have a bonus worth 20k and above")
+                f"A full time employee should have a bonus worth {self.MIN_BONUS} and above")
         self._bonus = value
 
     @tax.setter
@@ -72,6 +79,7 @@ class FullTimeEmployee(Employee):
 
 
 class ContractEmployee(Employee):
+    MIN_SALARY, MIN_BONUS, KIND = 500_000, 10_000, "Contract employee"
     @property
     def salary(self):
         return self._salary
@@ -86,15 +94,15 @@ class ContractEmployee(Employee):
 
     @salary.setter
     def salary(self, value):
-        if value < 500000:
-            raise ValueError("A Full time employee earns 700K and above")
+        if value < self.MIN_SALARY:
+            raise ValueError(f"A Full time employee earns {self.MIN_SALARY} and above")
         self._salary = value
 
     @bonus.setter
     def bonus(self, value):
-        if value < 10000:
+        if value < self.MIN_BONUS:
             raise ValueError(
-                "A full time employee should have a bonus worth 20k and above")
+                f"A full time employee should have a bonus worth {self.MIN_BONUS} and above")
         self._bonus = value
 
     @tax.setter
@@ -105,7 +113,7 @@ class ContractEmployee(Employee):
 
 
 class Intern(Employee):
-
+    MIN_SALARY, MIN_BONUS, KIND = 350_000, 7_000, "Intern"
     @property
     def salary(self):
         return self._salary
@@ -120,15 +128,15 @@ class Intern(Employee):
 
     @salary.setter
     def salary(self, value):
-        if value < 350000:
-            raise ValueError("A Full time employee earns 700K and above")
+        if value < self.MIN_SALARY:
+            raise ValueError(f"A Full time employee earns {self.MIN_SALARY} and above")
         self._salary = value
 
     @bonus.setter
     def bonus(self, value):
-        if value < 7000:
+        if value < self.MIN_BONUS:
             raise ValueError(
-                "A full time employee should have a bonus worth 20k and above")
+                f"A full time employee should have a bonus worth {self.MIN_BONUS} and above")
         self._bonus = value
 
     @tax.setter

@@ -5,9 +5,6 @@ def calculate_salary(employee: Employee):
     return employee["salary"] + employee["bonus"]
 
 
-def apply_tax(employee: Employee):
-    return employee["salary"] - employee["tax"]
-
 
 def generate_payslip(employee: Employee):
     print(employee)
