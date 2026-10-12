@@ -19,21 +19,20 @@ class Employee:
 
     @salary.setter
     def salary(self, value):
-        print(f"Giving salary the value of {value}")
         if value < 700000:
             raise ValueError("Salary should not be below zero")
         self._salary = value
 
     @bonus.setter
     def bonus(self, value):
-        if self._bonus > 0:
+        if value > 0:
             self._bonus = value
             return
         raise ValueError("The value of bonus should be at least 1 or more")
 
     @tax.setter
     def tax(self, value):
-        if self._tax > 1:
+        if value > 1:
             self._tax = value
             return
         raise ValueError("Every employee should be taxed a valid value")
