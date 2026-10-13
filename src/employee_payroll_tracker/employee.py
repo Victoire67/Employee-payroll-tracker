@@ -4,7 +4,7 @@ class Employee:
     KIND = "Employee"
 
     def __init__(self, salary: int, bonus: int, tax: int , name):
-        self.name = self.name
+        self.name = name       
         self.salary = salary
         self.bonus = bonus
         self.tax = tax
